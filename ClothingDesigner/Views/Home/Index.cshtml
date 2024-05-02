@@ -1,0 +1,22 @@
+﻿<svg width="100%" height="100%" viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+        <!-- Burada yuvarlak yolu tanımlıyoruz. -->
+        <path id="circlePathCanvas" transform="rotate(90 300 300)" d="M300,300 m-300,0 a300,300 0 1,0 600,0 a300,300 0 1,0 -600,0"></path>
+    </defs>
+    <text class="text-path" style="text-anchor: middle;">
+        <!-- circlePathCanvas ID'sine sahip yolu kullanıyoruz -->
+        <textPath xlink:href="#circlePathCanvas" startOffset="50%">Merhabaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa Circle!</textPath>
+    </text>
+</svg>
+
+<div class="row col-6">
+    <div class="mb-3">
+        <label id="TextEditor" class="form-label"></label>
+    </div>
+    <button id="editText" class="col-6">Edit</button>
+    <button id="addText" class="col-6">Add</button>
+</div>
+
+<div class="TextEditor">
+    <label id="TextEditorr" class="form-label"></label>
+</div>
