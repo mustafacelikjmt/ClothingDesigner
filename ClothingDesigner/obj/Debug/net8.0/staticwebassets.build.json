@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "EEF3vhCt2vBN6HG8Ol2N4L0F6homff6O684tZq3ylT0=",
+  "Hash": "mCueser+XQ4nnQ3ZX0gh25q0LPBCoXplEhxcVZ3fhUY=",
   "Source": "ClothingDesigner",
   "BasePath": "_content/ClothingDesigner",
   "Mode": "Default",
@@ -91,6 +91,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\favicon.ico"
+    },
+    {
+      "Identity": "C:\\Users\\musta\\source\\repos\\ClothingDesigner\\ClothingDesigner\\wwwroot\\js\\functions.js",
+      "SourceId": "ClothingDesigner",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\musta\\source\\repos\\ClothingDesigner\\ClothingDesigner\\wwwroot\\",
+      "BasePath": "_content/ClothingDesigner",
+      "RelativePath": "js/functions.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\functions.js"
     },
     {
       "Identity": "C:\\Users\\musta\\source\\repos\\ClothingDesigner\\ClothingDesigner\\wwwroot\\js\\site.js",

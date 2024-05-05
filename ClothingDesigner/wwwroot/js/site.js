@@ -1,4 +1,6 @@
 ﻿/* eslint-disable */
+import { copy, rotate, remove } from './functions.js'
+
 $(document).ready(function () {
     $(document).on('mousedown', function (e) { // Sürükleme.
         var $target = $(e.target) //Tıklanılan nesne
@@ -125,7 +127,6 @@ $(document).ready(function () {
                                     // .text-path bir SVG içinde olduğundan, textContent kullanılmalı
                                     selectedDragElement.find('.text-path textPath').html(content)
                                 }
-
                             })
                         }
                     })
@@ -143,7 +144,6 @@ $(document).ready(function () {
                 // İçerik ayarlama işlemini her iki seçici için de çağır
                 setContentInTinyMCE('.drag-element.selected .content')
                 setContentInTinyMCE('.drag-element.selected .text-path')
-
             } else { // Tıklanan yer element değilse.
                 if (!$target.closest('.TextEditor').length && !$target.closest('.tox-menu').length) {
                     $('.drag-element.selected').removeClass('selected')
@@ -166,55 +166,18 @@ $(document).ready(function () {
             function onMouseUp () { // Tıklama bırakıldığında.
                 $(document).off('mousemove', onMouseMove)
             }
-
         }
     }) // Sürükleme.
 
     $(document).on('click', '.drag-element.selected .bi-trash', function (e) { // Silme.
-        // Bu tıklama olayı ile 'selected' sınıfına sahip '.drag-element' elementini bul.
-        const selectedElement = $(this).closest('.drag-element')
-        if (selectedElement) {
-            // Bulunan elementi DOM'dan kaldır
-            selectedElement.remove()
-        }
+        remove.call(this)
     }) // Silme.
 
     $(document).on('click', '.drag-element.selected .bi-copy', function (e) { // Kopyalama.
-        const selectedElement = $(this).closest('.drag-element')
-        if (selectedElement) {
-            selectedElement.after(selectedElement.clone())
-        }
+        copy.call(this)
     }) // Kopyalama.
 
     $(document).on('mousedown', '.drag-element.selected .bi-arrow-repeat', function (e) { // Döndürme.
-        e.preventDefault()
-        const selectedElement = $(this).closest('.drag-element')
-
-        // Mevcut dönüş açısını al ve radyana çevir
-        const currentTransform = selectedElement.css('transform') // Dönüş açısıcı al.
-        let currentAngle = 0 // Başlangıç değeri 0 olan mevcut açıyı saklayan değişken.
-        if (currentTransform !== 'none') {
-            const values = currentTransform.split('(')[1].split(')')[0].split(',')
-            const a = values[0]
-            const b = values[1]
-            currentAngle = Math.atan2(b, a)
-        }
-
-        const elementOffset = selectedElement.offset()
-        const centerX = elementOffset.left + selectedElement.width() / 2
-        const centerY = elementOffset.top + selectedElement.height() / 2
-        const startAngle = Math.atan2(e.pageY - centerY, e.pageX - centerX) - currentAngle // Fare tıklaması anındaki başlangıç açısını hesaplar ve mevcut dönüş açısını çıkarır.
-
-        function rotateElement (e) {
-            const angle = Math.atan2(e.pageY - centerY, e.pageX - centerX) - startAngle
-            const degrees = angle * (180 / Math.PI)
-            selectedElement.css('transform', `rotate(${degrees}deg)`)
-        }
-
-        $(document).on('mousemove', rotateElement)
-        $(document).on('mouseup', function () {
-            $(document).off('mousemove', rotateElement)
-        })
+        rotate.call(this, e)
     }) // Döndürme.
-
 })

@@ -29,3 +29,4 @@ C:\Users\musta\source\repos\ClothingDesigner\ClothingDesigner\obj\Debug\net8.0\C
 C:\Users\musta\source\repos\ClothingDesigner\ClothingDesigner\obj\Debug\net8.0\ClothingDesigner.genruntimeconfig.cache
 C:\Users\musta\source\repos\ClothingDesigner\ClothingDesigner\obj\Debug\net8.0\ref\ClothingDesigner.dll
 C:\Users\musta\source\repos\ClothingDesigner\ClothingDesigner\bin\Debug\net8.0\libman.json
+C:\Users\musta\source\repos\ClothingDesigner\ClothingDesigner\obj\Debug\net8.0\ClothingDesigner.sourcelink.json

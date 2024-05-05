@@ -13,6 +13,10 @@
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
+      "Id": "C:\\Users\\musta\\source\\repos\\ClothingDesigner\\ClothingDesigner\\wwwroot\\js\\functions.js",
+      "PackagePath": "staticwebassets\\js\\functions.js"
+    },
+    {
       "Id": "C:\\Users\\musta\\source\\repos\\ClothingDesigner\\ClothingDesigner\\wwwroot\\js\\site.js",
       "PackagePath": "staticwebassets\\js\\site.js"
     },
