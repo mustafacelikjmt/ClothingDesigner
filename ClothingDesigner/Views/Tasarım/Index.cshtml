@@ -1,0 +1,40 @@
+﻿<div class="drag-element" id="content">
+    <!-- Boyutlandırılacak elementiniz -->
+    <div class="content">Drag me!</div>
+    <i class="bi bi-arrows-angle-expand"></i>
+    <i class="bi bi-trash"></i>
+    <i class="bi bi-copy"></i>
+    <i class="bi bi-arrow-repeat"></i>
+</div>
+
+@* <div class="drag-element">
+    <!-- Boyutlandırılacak elementiniz -->
+    <!-- xmlnsfarklı XML tabanlı diller arasındaki etiket çakışmaları önler -->
+    <svg width=100% height=100% viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+            <!-- Burada yuvarlak yolu tanımlıyoruz. -->
+            <path id="circlePathCanvas" transform="rotate(90 200 200)" d="M200,200 m-200,0 a200,200 0 1,0 400,0 a200,200 0 1,0 -400,0"></path>
+        </defs>
+        <path class="path-line" d="M212,200 m-200,0 a188,188 0 1,0 376,0 a188,188 0 1,0 -376,0"
+              fill="none" stroke="white" stroke-opacity="0.2" stroke-width="2" />
+        <text class="text-path" style="text-anchor: middle;">
+            <!-- circlePathCanvas ID'sine sahip yolu kullanıyoruz -->
+            <textPath xlink:href="#circlePathCanvas" startOffset="50%">Merhabaaaaa Circle!</textPath>
+        </text>
+    </svg>
+    <i class="bi bi-arrows-angle-expand"></i>
+    <i class="bi bi-trash"></i>
+    <i class="bi bi-copy"></i>
+    <i class="bi bi-arrow-repeat"></i>
+</div> *@
+
+<div class="drag-element TextEditor">
+    <label id="TextEditor" class="form-label"></label>
+</div>
+<div class="img-container">
+    <img src="~/img/beyazön.png" />
+    <div class="canvas-container">
+        <canvas id="myCanvas" class="canvas-container"></canvas>
+    </div>
+</div>
+<button id="saveBtn">Save State</button>

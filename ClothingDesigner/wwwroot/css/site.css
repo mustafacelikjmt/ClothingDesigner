@@ -1,0 +1,154 @@
+html {
+    font-size: 14px;
+}
+
+@media (min-width: 768px) {
+    html {
+        font-size: 16px;
+    }
+}
+
+.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
+    box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+}
+
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+body {
+    margin-bottom: 60px;
+}
+
+.canvas-container {
+    position: relative;
+    width: 195px;
+    height: 300px;
+    z-index: 5;
+}
+
+    .canvas-container canvas {
+        outline: 2px dashed #9e0000;
+    }
+
+.img-container {
+    display: flex;
+    justify-content: center; /* Yatayda ortala */
+    align-items: center; /* Dikeyde ortala */
+    position: relative;
+    width: 450px;
+    height: 600px;
+    outline: 1px solid black;
+    z-index: 4;
+}
+
+    .img-container img {
+        max-width: 100%; /* Resmin geniþliðini container geniþliði ile sýnýrla */
+        max-height: 100%; /* Resmin yüksekliðini container yüksekliði ile sýnýrla */
+        object-fit: contain; /* Resmi koruyarak sýðdýr */
+        display: block; /* Boþluklarý kaldýr */
+        margin: auto; /* Resmi ortala */
+        position: absolute; /* Pozisyonlandýrmak için */
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0; /* Tüm kenarlardan sýfýrla */
+    }
+
+.content {
+    font-size: 24px;
+    color: black;
+}
+
+.text-path {
+    font-size: 48px;
+}
+
+.drag-element {
+    color: #fff;
+    display: flex;
+    align-items: center; /* Dikey olarak ortalar */
+    justify-content: center; /* Yatay olarak ortalar */
+    position: absolute;
+    cursor: move;
+    z-index: 10;
+}
+
+    .drag-element i {
+        color: black;
+    }
+
+.bi-arrows-angle-expand {
+    cursor: not-allowed;
+    display: none;
+}
+
+.bi-trash {
+    cursor: not-allowed;
+    display: none;
+}
+
+.bi-copy {
+    cursor: not-allowed;
+    display: none;
+}
+
+.bi-arrow-repeat {
+    cursor: not-allowed;
+    display: none;
+}
+
+.path-line {
+    display: none;
+}
+
+.selected {
+    outline: 2px dashed #440000; /* Seçili elementin çevresine mavi bir çerçeve ekler */
+    z-index: 11;
+}
+
+    .selected .bi-arrows-angle-expand {
+        cursor: se-resize;
+        display: block;
+        position: absolute;
+        width: 8px;
+        height: 8px;
+        right: -13px;
+        bottom: -1px;
+        transform: rotate(90deg) translateZ(0); /* translateZ donaným hýzlandýrmayý aktifleþtirir ve býraktýðý iz sorunu düzelir. */
+    }
+
+    .selected .bi-trash {
+        cursor: pointer;
+        display: block;
+        position: absolute;
+        width: 8px;
+        height: 8px;
+        right: 0px;
+        top: -13px;
+    }
+
+    .selected .bi-copy {
+        cursor: pointer;
+        display: block;
+        position: absolute;
+        width: 8px;
+        height: 8px;
+        left: 3px;
+        top: -9px;
+        transform: rotate(90deg) translateZ(0);
+    }
+
+    .selected .bi-arrow-repeat {
+        cursor: crosshair;
+        display: block;
+        position: absolute;
+        left: 50%;
+        bottom: -35px;
+        transform: translateX(-50%);
+    }
+
+    .selected .path-line {
+        display: block;
+    }
